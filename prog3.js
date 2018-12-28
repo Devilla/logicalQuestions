@@ -7,13 +7,11 @@ var index,check=0;
 for(var i=1;i<=num.length;i++){
   arr[i]=arr[i-1]+num[i-1];
 }
-var k=num.length-1;
-for(var j=1;j<num.length;j++){
-  brr[j]=brr[j-1]+num[k];
-  k--;
+for(var j=1;j<arr.length;j++){
+  brr[j]=arr[arr.length-j-1];
 }
 
-for(var i=1;i<num.length;i++){
+for(var i=1;i<=num.length;i++){
   if(arr[i]==brr[i]){
     check=1;
     index=i-1;
